@@ -87,16 +87,40 @@ str = 'runoob'
 print str.center(20,'*')
 print str.center(20)
 
-###count() 方法用于统计字符串里某个字符出现的次数。可选参数为在字符串搜索的开始与结束位置。
+##count() 方法用于统计字符串里某个字符出现的次数。可选参数为在字符串搜索的开始与结束位置。
 str = "this is string example....wow!!!";
 sub = "i";
 print "str.count(sub, 4, 40) : ", str.count(sub, 4, 40)
 sub = "wow";
 print "str.count(sub) : ", str.count(sub)
 
-###decode() 方法以 encoding 指定的编码格式解码字符串。默认编码为字符串编码。
+##decode() 方法以 encoding 指定的编码格式解码字符串。默认编码为字符串编码。
 str = "this is string example....wow!!!";
 str = str.encode('base64','strict');
 
 print "Encoded String: " + str;
 print "Decoded String: " + str.decode('base64','strict')
+
+##endswith() 方法用于判断字符串是否以指定后缀结尾，如果以指定后缀结尾返回True，
+## 否则返回False。可选参数"start"与"end"为检索字符串的开始与结束位置。
+str = "this is string example....wow!!!";
+
+suffix = "wow!!!";
+print str.endswith(suffix);
+print str.endswith(suffix,20);
+
+suffix = "is";
+print str.endswith(suffix, 2, 4);
+print str.endswith(suffix, 2, 6);
+
+## isalnum() 方法检测字符串是否由字母和数字组成。
+str = "this2009";  # 字符中没有空格
+print str.isalnum();
+
+str = "this is string example....wow!!!";
+print str.isalnum();
+
+## join() 方法用于将序列中的元素以指定的字符连接生成一个新的字符串。
+str = "-";
+seq = ("a", "b", "c"); # 字符串序列
+print str.join( seq );
