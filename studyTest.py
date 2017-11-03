@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 #coding=utf-8
 
-
+import math
 
 
 '''
@@ -55,20 +55,19 @@
 ，求它在第10次落地时，共经过多少米？第10次反弹多高？
 '''
 
-aa = input("请输入高度")
-heathNum=int(aa)
-baHeath=heathNum;
-everyHeath=0
-toutalNum=heathNum
-lowHeath=0
-for i in range(1,11):
-    baHeath = baHeath/2
-    print(baHeath)
-    toutalNum = toutalNum+baHeath
-    lowHeath=baHeath
-print(toutalNum)
-print(lowHeath)
-
+# aa = input("请输入高度")
+# heathNum=int(aa)
+# baHeath=heathNum;
+# everyHeath=0
+# toutalNum=heathNum
+# lowHeath=0
+# for i in range(1,11):
+#     baHeath = baHeath/float(2)
+#     print(baHeath)
+#     toutalNum = toutalNum+baHeath
+#     lowHeath=baHeath
+# print(toutalNum*2-heathNum)
+# print(lowHeath)
 
 '''
 输入一行字符，分别统计出其中英文字母、空格、数字和其他字符的个数
@@ -93,18 +92,5 @@ print(lowHeath)
 
 
 
-
-
-
-
-
-# di2={}
-# for i in range(0,3):
-#     key=input('输入一个键');
-#     value=input('输入一个值')
-#     di1={key:value}
-#     di2.update(di1)
-# print di2
-
-##原码补码 反码
-
+content = dir(math)
+print content
