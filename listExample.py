@@ -142,3 +142,35 @@ aList = [123, 'xyz', 'zara', 'abc', 'xyz'];
 
 aList.sort();
 print "List : ", aList;
+
+
+
+
+'''
+列表推导式
+和列表一样，列表推导式也采用了方括号[]，并且用到了一个简写版的for循环，第一部分是一个
+生成结果列表元素的表达式，第二部分是一个输入表达式的循环。
+阅读理解列表表达式的推荐做法是先从里面的for循环开始，向右查看是否有if条件，然后推导式
+开始的那个表达式映射到每一个匹配的元素上去
+'''
+lis1=[1,2,3,4,5]
+list2=[x for x in lis1 if x>3]
+print (list2)
+
+'''
+求（x,y）其中x是0-5之间的偶数，y是0-5之间的奇数组成的元组列表
+'''
+new_list=[(x,y) for x in range(5) if x%2==0 for y in range(5) if y%2==1]
+print (new_list)
+
+
+
+list1=[i for i in range(100,1000) if i == (i//100)**3+(i%100//10)**3+(i%100%10)**3 ]
+print(list1)
+
+
+#镶嵌列表推导式
+
+names = [['Tom','Billy','Jefferson','Andrew','Wesley','Steven','Joe'],['Alice','Jill','Ana','Wendy','Jennifer','Sherry','Eva']]
+list1=[name.lower()  for lis in names for name in lis if name.count('e')>=2 ]
+print(list1)

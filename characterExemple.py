@@ -44,6 +44,12 @@ Python 支持格式化字符串的输出 。尽管这样可能会用到非常复
 '''
 print "My name is %s and weight is %d kg!" % ('Zara', 21)
 
+mm='我的名字是{name},我的年纪是{age}'
+ss=mm.format(name='哈士奇',age=5)
+print(ss)
+ss=mm.format_map({'name':'哈士奇','age':5})
+print(ss)
+
 
 ##Python三引号（triple quotes）
 ###python中三引号可以将复杂的字符串进行复制:

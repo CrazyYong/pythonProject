@@ -56,3 +56,16 @@ print "Value of x , y : ", x,y;
 print tuple([1,2,3,4])
 print tuple({1:2,3:4}) ###针对字典 会返回字典的key组成的tuple
 print tuple((1,2,3,4)) ###元组会返回元组自身
+
+#元组推导式
+
+names = {'Tom','Billy','Jefferson','Andrew','Wesley','Steven','Joe','Alice','Jill','Ana','Wendy','Jennifer','Sherry','Eva'}
+# list1={name.upper() for name in names if len(name)>=4}
+# print(list1)
+list2=(name.upper() for name in names if len(name)>=5)
+list3=[name.upper() for name in names if len(name)>=5]
+m=iter(list2) #用iter函数生成迭代器对象
+print(list3)
+print(next(m))#用next去遍历其中的值 yield
+print(next(m))#用next去遍历其中的值 yield
+print(next(m))#用next去遍历其中的值 yield
