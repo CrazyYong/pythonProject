@@ -18,8 +18,8 @@ tup1 = (50,);#元组中只包含一个元素时，需要在元素后面添加逗
 tup1 = ('physics', 'chemistry', 1997, 2000);
 tup2 = (1, 2, 3, 4, 5, 6, 7 );
 
-print "tup1[0]: ", tup1[0]
-print "tup2[1:5]: ", tup2[1:5]
+print ("tup1[0]: ", tup1[0])
+print ("tup2[1:5]: ", tup2[1:5])
 
 ##修改元组
 tup1 = (12, 34.56);
@@ -30,7 +30,7 @@ tup2 = ('abc', 'xyz');
 
 ### 创建一个新的元组
 tup3 = tup1 + tup2;
-print tup3
+print (tup3)
 
 ##删除元组
 ##元组中的元素值是不允许删除的，但我们可以使用del语句来删除整个元组，删除后再打印会报错，如下实例:
@@ -47,15 +47,15 @@ print tup3
 
 ##无关闭分隔符
 ##任意无符号的对象，以逗号隔开，默认为元组，如下实例：
-print 'abc', -4.24e93, 18+6.6j, 'xyz';
+print ('abc', -4.24e93, 18+6.6j, 'xyz');
 x, y = 1, 2;
-print "Value of x , y : ", x,y;
+print ("Value of x , y : ", x,y);
 
 ##元组内置函数(cmp(),len(),max(),min()方法和列表类似)
 ###tuple() 函数将列表转换为元组。
-print tuple([1,2,3,4])
-print tuple({1:2,3:4}) ###针对字典 会返回字典的key组成的tuple
-print tuple((1,2,3,4)) ###元组会返回元组自身
+print (tuple([1,2,3,4]))
+print (tuple({1:2,3:4})) ###针对字典 会返回字典的key组成的tuple
+print (tuple((1,2,3,4))) ###元组会返回元组自身
 
 #元组推导式
 
