@@ -147,29 +147,36 @@ import math
 ，请取卡”，否则提示用户重新输入金额
 假设密码是 888888
 '''
-password_correct='888888'
-password_num=0
-while True:
-    password_txt=input('请输入密码')
-    if password_txt==password_correct:
-        money_txt=input('请输入金额，最大面额100元，最低取0元，最高1000元:')
-        if int(money_txt)%100==0 and int(money_txt)>=0 and int(money_txt)<=1000:
-            new_txt=input('您的取得金额是%s'%money_txt+'\n'+"回复Y继续取钱，回复N请取卡:")
-            if new_txt=='Y':
-                continue
-            else:
-                break
+# password_correct='888888'
+# password_num=0
+# while True:
+#     password_txt=input('请输入密码')
+#     if password_txt==password_correct:
+#         money_txt=input('请输入金额，最大面额100元，最低取0元，最高1000元:')
+#         if int(money_txt)%100==0 and int(money_txt)>=0 and int(money_txt)<=1000:
+#             new_txt=input('您的取得金额是%s'%money_txt+'\n'+"回复Y继续取钱，回复N请取卡:")
+#             if new_txt=='Y':
+#                 continue
+#             else:
+#                 break
+#
+#     elif password_num<3:
+#         password_num+=1
+#         print(password_num)
+#         print('密码输入错误，请重新输入')
+#         continue
+#     elif password_num>=3:
+#         print('密码输入错误超过，结束交易')
+#         break
 
-    elif password_num<3:
-        password_num+=1
-        print(password_num)
-        print('密码输入错误，请重新输入')
-        continue
-    elif password_num>=3:
-        print('密码输入错误超过，结束交易')
-        break
 
 
-
+# 10.将列表用for循环添加到另一个字典中.
+# mm=['dog','cat','people','name']
+# # list1=list(enumerate(mm))
+# # print(list1)
+# nn=[0,1,2,3]
+# ll={key:value  for key,value in enumerate(mm)}
+# print(ll)
 
 
