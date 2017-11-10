@@ -60,6 +60,25 @@ def Fib(max):
 f=Fib(10)
 print (f.next())
 
+'''
+生成器函数在每次暂停执行时，函数体内的所有变量都将被封存(freeze)在生成器中，
+并将在恢复执行时还原，并且类似于闭包，即使是同一个生成器函数返回的生成器，封存的变量也是互相独立的。 
+我们的小例子中并没有用到变量，所以这里另外定义一个生成器来展示这个特点：
+'''
+def fibonacci():
+    a=b=1
+    yield a
+    yield b
+    while True:
+        a,b = b,a+b
+        yield b
+
+
+for num in fibonacci():
+    if num>100:break
+    print num
+
+
 ##如何判断一个函数是否是一个特殊的 generator 函数？可以利用 isgeneratorfunction 判断：
 from inspect import isgeneratorfunction
 print (isgeneratorfunction(Fib) )

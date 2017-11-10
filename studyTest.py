@@ -180,3 +180,19 @@ import math
 # print(ll)
 
 
+# 11.编写一个函数，输入n为偶数时，调用函数1/2+1/4+...+1/n，当输入为奇数时，调用函数
+# 1/1+1/3+...+1/n
+# 1-1/2+1/2-1/4+1/4-1/8.2/n-1/n=1-1/n=（n-1）/n
+
+mm = int(input('请输入一个数'))
+if mm % 2 == 0:
+    # event_num=(mm-1)/mm
+    print ('%d/%d' % (mm - 1, mm))
+elif mm % 2 == 1:
+    for i in range(1, mm + 2, 2):
+        sum += 1.0 / i
+        print (sum)
+
+
+
+
