@@ -184,14 +184,51 @@ import math
 # 1/1+1/3+...+1/n
 # 1-1/2+1/2-1/4+1/4-1/8.2/n-1/n=1-1/n=（n-1）/n
 
-mm = int(input('请输入一个数'))
-if mm % 2 == 0:
-    # event_num=(mm-1)/mm
-    print ('%d/%d' % (mm - 1, mm))
-elif mm % 2 == 1:
-    for i in range(1, mm + 2, 2):
-        sum += 1.0 / i
-        print (sum)
+# def sum_even(n):
+#     sum=0
+#     for i in range(2,n+2,2):
+#         sum +=1/i
+#     print('%d是偶数，分数积是%f'%(n,sum))
+#
+# def sum_odd(n):
+#     sum = 0
+#     for i in range(1, n + 1, 2):
+#         sum += 1 / i
+#     print('%d是奇数，分数积是%f' % (n, sum))
+# nn=int(input('请输入一个整数:'))
+# if nn % 2 ==0:
+#     sum_even(nn)
+# else:
+#     sum_odd(nn)
+
+
+#12.定义一个函数，实现两个数的四则运算，注意要有三个参数，分别是运算符和两个用于运算的数字
+# def math1(x,y,z):
+#     if z=='+':
+#         return x+y
+#     elif z=='-':
+#         return x-y
+#     elif z=='*':
+#         return x*y
+#     elif z=='/':
+#         return x/y
+#
+# mm1=math1
+# print(mm1(3,6,'/'))
+
+#13斐波那契数列（Fibonacci sequence）指的是这样一个数列：1、1、2、3、5、8、13、21、34、……在数学上，
+# 斐波纳契数列以如下被以递归的方法定义：F(0)=0，F(1)=1, F(n)=F(n-1)+F(n-2)（n>=2，n∈N*）
+def fib(n):
+    if n==0:
+        return n
+    if n==1:
+        return n
+    if n>=2:
+        return fib(n-1)+fib(n-2)
+mm=fib(5)
+#当n=5时,返回fib(4)+fib(3)  fib(3)+fib(2)+
+print(mm)
+#14约瑟夫环问题.n个人组成一个环或者排成一个队,从n个人的第一个人每次报数k,然后剔除
 
 
 
