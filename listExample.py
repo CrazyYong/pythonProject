@@ -174,3 +174,4 @@ print(list1)
 names = [['Tom','Billy','Jefferson','Andrew','Wesley','Steven','Joe'],['Alice','Jill','Ana','Wendy','Jennifer','Sherry','Eva']]
 list1=[name.lower()  for lis in names for name in lis if name.count('e')>=2 ]
 print(list1)
+

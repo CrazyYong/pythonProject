@@ -1,3 +1,6 @@
+#!/usr/bin/python3
+#coding=utf-8
+
 # 1.餐馆：创建一个名为Restaurant的类，其方法__init__()设置两个属性：
 # restaurant_name 和 cuisine_type(烹饪)。
 # 创建一个名为 describe_restaurant()方法和一个名为open_restaurant ()方法,

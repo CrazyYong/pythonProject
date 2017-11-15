@@ -7,6 +7,7 @@
 #lambda argument1,argument2,...argumentN:expression using arguments
 
 print (filter(lambda x:x>3,[1,2,3,4]))
+print (filter(lambda x:x.count('e')>=2,['Tom','Uppen','Cpede','Madbe']))
 
 
 #带参数匿名函数
