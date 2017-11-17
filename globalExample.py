@@ -62,3 +62,4 @@ def func_local(x):
 x = (1,2,3,)
 func_local(x)
 print 'x is', x
+

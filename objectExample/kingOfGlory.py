@@ -27,3 +27,4 @@ ake = KingOfGlory('阿珂','刺客',1000,'瞬华')
 kai.scene1()
 kai.scene2()
 kai.scene3()
+

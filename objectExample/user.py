@@ -36,3 +36,4 @@ if __name__=='__main__':
     print('当前的login_attempts的次数是',user1.login_attempts)
     user1.reset_login_attempts()
     print('当前的login_attempts的重置后的次数是', user1.login_attempts)
+    
