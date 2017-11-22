@@ -17,10 +17,10 @@ return [表达式] 结束函数，选择性地返回一个值给调用方。不�
 
 def functionname( parameters ):
    "函数_文档字符串"
-   print parameters
+   print (parameters)
    return '返回值'
 
-print functionname(5)
+print (functionname(5))
 
 ##参数传递  在 python 中，类型属于对象，变量是没有类型的：
 a=[1,2,3]

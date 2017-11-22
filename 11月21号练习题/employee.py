@@ -74,11 +74,14 @@ like to see a status report?”。
 这样，就打印一条消息，指出需要输入别的用户名；否则，打印一条消息，指
 出这个用户名未被使用。 
 '''
-current_users=['admin','emoply','bob','xiaowang','xiaolan']
-new_users=['admin','feifei','bob','blany','join']
+# current_users=['admin','emoply','bob','xiaowang','xiaolan']
+# new_users=['admin','feifei','bob','blany','join']
+#
+# for i in range(0,len(new_users)):
+#         if new_users[i]==current_users[i]:
+#             print('%s该用户名已被使用，请输入其他用户名'%(new_users[i]))
+#         else:
+#             print('%s这个用户名可以使用'%(new_users[i]))
 
-for i in range(0,len(new_users)):
-        if new_users[i]==current_users[i]:
-            print('%s该用户名已被使用，请输入其他用户名'%(new_users[i]))
-        else:
-            print('%s这个用户名可以使用'%(new_users[i]))
+m='qwea sdzxc'
+print(m[::-1])
