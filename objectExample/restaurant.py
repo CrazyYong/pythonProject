@@ -54,24 +54,20 @@ if __name__ == '__main__':
 
 
 
-
-
-
-
-# if __name__ == '__main__':
-#     # restaurant = Restaurant('桂满陇', '江浙菜')
-#     # print(restaurant.restaurant_name)
-#     # print(restaurant.cuisine_type)
-#     # 创建三个Restaurant的实例化对象
-#     restaurant1 = Restaurant('傣妹', '四川')
-#     restaurant2 = Restaurant('上上签', '火锅')
-#     restaurant3 = Restaurant('我家酸菜鱼', '鱼火锅')
-#     # 实例化对象调用我们的类方法
-#     # restaurant1.describe_restaurant()
-#     # restaurant2.describe_restaurant()
-#     # restaurant3.describe_restaurant()
-#     # restaurant1.open_restaurant()
-#     # restaurant2.open_restaurant()
-#     restaurant3.open_restaurant()
-#     # restaurant3.set_number_served(44)
-#     restaurant3.increment_number_served(20)
+if __name__ == '__main__':
+    # restaurant = Restaurant('桂满陇', '江浙菜')
+    # print(restaurant.restaurant_name)
+    # print(restaurant.cuisine_type)
+    # 创建三个Restaurant的实例化对象
+    restaurant1 = Restaurant('傣妹', '四川')
+    restaurant2 = Restaurant('上上签', '火锅')
+    restaurant3 = Restaurant('我家酸菜鱼', '鱼火锅')
+    # 实例化对象调用我们的类方法
+    # restaurant1.describe_restaurant()
+    # restaurant2.describe_restaurant()
+    # restaurant3.describe_restaurant()
+    # restaurant1.open_restaurant()
+    # restaurant2.open_restaurant()
+    restaurant3.open_restaurant()
+    # restaurant3.set_number_served(44)
+    restaurant3.increment_number_served(20)

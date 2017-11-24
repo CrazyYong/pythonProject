@@ -5,6 +5,7 @@ class people:
     这个类是一个人类,实例属性包含name,age,sex
     '''
     eat='喜欢吃饭喜欢睡觉'
+    __like='喜欢的类型'
     #self是类的实例
     def __init__(self,name,age,sex):
         self.name=name
@@ -17,6 +18,7 @@ class people:
 #person1是类的实例化对象
 # if __name__=='__main__':
 person1=people('成乔恩',34,'女')
+# print(person1._people__like)
 # 通过实例化属性名调用类的方法
 # person1.getinfo()
 
