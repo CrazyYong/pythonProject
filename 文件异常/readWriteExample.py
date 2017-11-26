@@ -40,9 +40,9 @@
 
 
 #with open 写入文件
-# with open('lala.txt','a') as file:
-#     file.write(r'I love Python\n')
-#     file.close()
+with open('lala.txt','a') as file:
+    file.write(r'I love Python\n')
+    file.close()
 
 # with open('lala.txt', 'r') as file:
 #     contents=file.read()
