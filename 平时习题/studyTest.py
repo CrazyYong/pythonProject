@@ -229,18 +229,68 @@ mm=fib(5)
 #当n=5时,返回fib(4)+fib(3)  fib(3)+fib(2)+
 print(mm)
 #14约瑟夫环问题.n个人组成一个环或者排成一个队,从n个人的第一个人每次报数k,然后剔除
-def yuese(n,k):
-    index=0
-    #针对n个人形成一个列表
-    people=list(range(1,n+1))
-    while 1:
-        if len(people)==2:
-            break
-        #index是删除的索引值
-        index=(index+(k-1))%len(people)
-        del people[index]
-    print('存活下来的两个幸运的人',people)
-mm= yuese(45,3)
+# def yuese(n,k):
+#     index=0
+#     #针对n个人形成一个列表
+#     people=list(range(1,n+1))
+#     while 1:
+#         if len(people)==2:
+#             break
+#         #index是删除的索引值
+#         index=(index+(k-1))%len(people)
+#         del people[index]
+#     print('存活下来的两个幸运的人',people)
+# mm= yuese(45,3)
+
+'''
+列表操作
+假设有一个列表[1,1,0,2,2,2,4,3,3,4,2,0,0]通过程序将列表分割为[[1,1],[0],[2,2,2],[4],[3,3],[4],[2],[0,0]]
+即，如果相邻的列表元素如果相同则进行切割存放在一起，不同则分别单独切割
+注：将此程序封装成函数
+'''
+
+# def listOper(list_old):
+#     list_new=[]
+#     list_o=[]
+#     list_n=[]
+#     for i in range (1,len(list_old)):
+#         if list_old[i]==list_old[i-1]:
+#             list_o.append(list_old[i])
+#             list_o.append(list_old[i-1])
+#             list_new.append(list_o)
+#         else:
+#             list_n.append(list_old[i])
+#             list_new.append(list_n)
+#     print(list_new)
+#
+#
+# list1=[1,1,0,2,2,2,4,3,3,4,2,0,0]
+# listOper(list1)
+
+#
+def mayMethod(lisPrams):
+    a=[]
+    x=[]
+    for i in range(len(lisPrams)):
+        if i+1<len(lisPrams):
+            if lisPrams[i]==lisPrams[i+1]:
+                x.append(lisPrams[i])
+            else:
+                x.append(lisPrams[i])
+                a.append(x)
+                x=[]
+
+        else:
+            x.append(lisPrams[len(lisPrams)-1])
+            a.append(x)
+    return a
+
+list1=[1,1,0,2,2,2,4,3,3,4,2,0,0]
+print(mayMethod(list1))
 
 
 
+a=1
+for i in range (1,6):
+    a=(a+1)*2
+print(a)
