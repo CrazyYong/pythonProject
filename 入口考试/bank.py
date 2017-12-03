@@ -224,17 +224,36 @@ while True:
 '''
 
 
-def listOper(list1):
-    list_new=[]
-    for i in range(1,len(list1)):
-        if list1[i]==list1[i-1]:
-            list_new.append(list1[i])
-            list_new.append(list1[i-1])
-        else:
-            list_new.append(list1[i])
-        print (list_new)
+# def maxOp(list_num):
+#     array = [int(x) for x in list_num]
+#     for i in range(len(array))[::-1]:
+#         for j in range(i):
+#             if array[j] > array[j + 1]:
+#                 array[j], array[j + 1] = array[j + 1], array[j]
+#     print (array)
+#
+# input_txt=input('请输入不少于五个数字，数字之间用空格隔开')
+# list_num=input_txt.split(' ')
+# maxOp(list_num)
 
 
-# lists=[1,1,0,2,2,2,3,4,0,0,1,1]
-lists=[1,1,2]
-listOper(lists)
+def fileOper(input_txt):
+    try:
+        with open('cc.txt', 'a+', encoding='utf-8') as file:
+            file.write(txt)
+            file.write('\n')
+            file.flush()
+            file.seek(0)
+            txt_read = file.read()
+            print (txt_read)
+    except FileNotFoundError:
+            file.close
+            print ('文件没有')
+
+
+while True:
+    txt = input('请输入内容')
+    if txt=='#':
+        break
+    else:
+        fileOper(txt)
