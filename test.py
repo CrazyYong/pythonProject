@@ -1,72 +1,70 @@
+from pandas import Series, DataFrame
+import pandas as pd
 import numpy as np
 
-# arr1=np.array([
-#     [
-#         [1,2,3],[4,5,6]
-#     ]
-#     ,
-# [
-#         [7,8,9],[10,11,12]
-#     ]
-#     ,
-# [
-#         [13,14,15],[16,17,18]
-#     ]
-# ]
-# )
+
+# arr=np.array([1,3,5,np.NaN,10])
+# ser1=Series(arr)
+# print(ser1)
+# print(ser1.index) #索引index
+# print(ser1.values)#值
+
+
+# ser2=Series([87,88,89])
+# print(ser2)
+
+# dict1={'2017333':434.0,'32323':1234.5,'23232':323232.2}
+# ser3=Series(dict1)
+# print(ser3)
+
+# ser4=Series(data=[88,87,85],index=[u'语文',u'数学',u'英语'],dtype=float)
+# print(ser4)
+# print(ser4['语文'])
+# print(ser4[0:])
+# print(ser4['语文':'数学'])
+
+
+# ser5=Series({'2017333':434.0,'32323':1234.5,'23232':323232.2})
+# print(ser5>50000)
+# print(ser5/100)
+# ser6=Series([-1,-1,-3,4])
+# print(np.exp(ser6))
+# print(np.fabs(ser6))
+
+
+# scores=Series({'Tom':89,'John':88,'Merry':96,'Max':65})
+# new_index=['Tom','Max','Joe','John','Merry']
+# scores=Series(scores,index=new_index)
+# scores['Joe']=-1
+# print(scores)
+# print(pd.isnull(scores))
+# print(pd.notnull(scores))
+# print(scores[pd.isnull(scores)])
+# print(scores[pd.notnull(scores)])
+
+
+# s1=Series([12,13,34],index=['p1','p2','p3'])
+# s2=Series([54,43,32,21],index=['p2','p3','p4','p5'])
+# print(s1+s2)
 
 
 
-# print(arr1[:,0:,0])
+# scores=Series({'Tom':89,'John':88,'Merry':96,'Max':65})
+# scores.name=u'语文'
+# scores.index.name=u'考试成绩'
+# print(scores)
 
 
-# arr2=np.arange(32).reshape(8,4)
-# print(arr2)
-# print(arr2[[0,3]]) #获取第0行第3行数据
-# print(arr2[[0,3,5],[0,3,2]])#h获取第（0,0），（3,3），（5,2）这三个索引位置的数据[0,15,22]
-# print(arr2[np.ix_([0,3,5],[0,3,2])])
+df1=DataFrame([
+    ['Tom','Gerry','John']
+    ,[76,98,78]
+])
 
-# arr3=np.arange(40).reshape(5,-1)
-# print(arr3.shape)
-#
-# arr4=arr3.transpose()
-# arr5=arr3.T
-# print(arr5.shape)
+df2=DataFrame([['Tom',76,],
+               ['Gerry',98],
+               ['John',85]
+               ],columns=[u'姓名',u'成绩'])
 
-# arr6=np.array([-5.3,-6.2,-4.3])
-# print(np.fabs(arr6))
-
-# arr7=np.array([
-#     [1,2,3,4],
-#     [7,8,9,10]])
-# print(arr7)
-# print(arr7.min())
-# print(arr7.max())
-# print(arr7.mean())
-# print(arr7.min(axis=0))#二维数组的情况下，axis=0表示对同列的数据进行聚合；axis=1表示对同行的数据进行聚合
-# print(arr7.sum(axis=1))
-
-
-
-
-# xarr=np.array([-1.1,-1.2,-1.3,-1.4,-1.5])
-# yarr=np.array([-2.1,-2.2,-2.3,-2.4,-2.5])
-# condition=xarr<yarr
-# print(condition)
-# result1=[x if c else y for (x,y,c) in zip(xarr,yarr,condition)]
-# print(result1)
-# result2=np.where(condition,xarr,yarr)
-# print(result2)
-
-# arr8=np.array([[1,2,np.NaN,4],[4,5,6,np.NaN],
-#              [7,8,9,np.inf],
-#              [np.inf,np.e,np.pi,4]])
-# condition=np.isnan(arr8)|np.isinf(arr8)
-# print(np.where(condition,0,arr8))
-
-
-arr=np.array([u'图书馆',u'数码',u'小吃',u'数码',u'女装',u'小吃',u'美食',u'男装'
-              u'数码'])
-# print(arr)
-arr2=np.unique(arr)
-print(arr2)
+print(df2.columns)#列索引
+print(df2.index)#行索引
+print(df2.values)#数据
