@@ -268,29 +268,38 @@ print(mm)
 # listOper(list1)
 
 #
-def mayMethod(lisPrams):
-    a=[]
-    x=[]
-    for i in range(len(lisPrams)):
-        if i+1<len(lisPrams):
-            if lisPrams[i]==lisPrams[i+1]:
-                x.append(lisPrams[i])
-            else:
-                x.append(lisPrams[i])
-                a.append(x)
-                x=[]
-
-        else:
-            x.append(lisPrams[len(lisPrams)-1])
-            a.append(x)
-    return a
-
-list1=[1,1,0,2,2,2,4,3,3,4,2,0,0]
-print(mayMethod(list1))
-
+# def mayMethod(lisPrams):
+#     a=[]
+#     x=[]
+#     for i in range(len(lisPrams)):
+#         if i+1<len(lisPrams):
+#             if lisPrams[i]==lisPrams[i+1]:
+#                 x.append(lisPrams[i])
+#             else:
+#                 x.append(lisPrams[i])
+#                 a.append(x)
+#                 x=[]
+#
+#         else:
+#             x.append(lisPrams[len(lisPrams)-1])
+#             a.append(x)
+#     return a
+#
+# list1=[1,1,0,2,2,2,4,3,3,4,2,0,0]
+# print(mayMethod(list1))
 
 
 a=1
 for i in range (1,6):
     a=(a+1)*2
 print(a)
+
+
+x=[3,5,7]
+print(x[10:])
+
+
+for i in range (0,8):
+    if i<5:
+        print(i)
+        continue
