@@ -2,7 +2,6 @@ import matplotlib as mpl
 import matplotlib.pyplot as plt
 import numpy as np
 
-
 #解决中文输出问题
 mpl.rcParams['font.sans-serif']=[u'Simhei']
 mpl.rcParams['axes.unicode_minus']=False
