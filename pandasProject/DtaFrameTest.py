@@ -35,8 +35,8 @@ df3.index=['one','two','three']
 print(df3)
 
 
-df4=pd.read_csv("C:/Users/admin/Desktop/data2.csv")
-print(df4)
+# df4=pd.read_csv("C:/Users/admin/Desktop/data2.csv")
+# print(df4)
 
 df5=pd.read_csv("data02.txt")
 print(df5)
