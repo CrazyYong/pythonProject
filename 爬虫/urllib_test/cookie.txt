@@ -1,0 +1,8 @@
+# Netscape HTTP Cookie File
+# http://curl.haxx.se/rfc/cookie_spec.html
+# This is a generated file!  Do not edit.
+
+www.ibeifeng.com	FALSE	/	FALSE	1544327533	ECS[visit_times]	1
+www.ibeifeng.com	FALSE	/	FALSE		ECS_ID	fc661a644cb0e69f3212a459bfb5daa4df9555b2
+www.ibeifeng.com	FALSE	/	FALSE	1513655533	real_ipd	101.88.227.2
+www.ibeifeng.com	FALSE	/	FALSE		route	bc34b4cd3d229b9838148ff484b1c585
