@@ -1,5 +1,5 @@
 import urllib.request
-#穿入一个协议，HTTP协议
+#传入一个协议，HTTP协议
 #urllib.request.urlopen(url,data,timeout)
 #url   目标网址，URL
 #data  访问url时发送的数据包

@@ -2,7 +2,7 @@
 # http://curl.haxx.se/rfc/cookie_spec.html
 # This is a generated file!  Do not edit.
 
-www.ibeifeng.com	FALSE	/	FALSE	1544327533	ECS[visit_times]	1
-www.ibeifeng.com	FALSE	/	FALSE		ECS_ID	fc661a644cb0e69f3212a459bfb5daa4df9555b2
-www.ibeifeng.com	FALSE	/	FALSE	1513655533	real_ipd	101.88.227.2
-www.ibeifeng.com	FALSE	/	FALSE		route	bc34b4cd3d229b9838148ff484b1c585
+www.ibeifeng.com	FALSE	/	FALSE	1544429890	ECS[visit_times]	1
+www.ibeifeng.com	FALSE	/	FALSE		ECS_ID	600e7776eb8ffd9bc03983d845c1c2aa33380c29
+www.ibeifeng.com	FALSE	/	FALSE	1513757890	real_ipd	113.88.15.199
+www.ibeifeng.com	FALSE	/	FALSE		route	f8c75d468de16d5fae6f24965c2aa4a7
