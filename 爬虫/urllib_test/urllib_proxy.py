@@ -13,5 +13,7 @@ opener.addheaders=[('User-Agent','Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebK
 request.install_opener(opener)
 #使用opener
 response=request.urlopen(url)
+
+opener.ope
 #读取信息
 print(response.read().decode('gbk'))
