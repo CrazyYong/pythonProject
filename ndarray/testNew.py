@@ -6,7 +6,8 @@ from pandas import Series,DataFrame
 https://zhuanlan.zhihu.com/p/21598982
 '''
 
-df=DataFrame({'key1':['a','a','b','b','a'],
-              'key2':['one','two','one','two','one']
-              ,'data1':np.random.randn(5)
-              ,'data2':np.random.randn(5)})
+
+arr= np.array([[1,2,3],[4,5,6]])
+arr2=np.array([[1,2,3],[4,5,6]])
+
+print(arr*arr2)

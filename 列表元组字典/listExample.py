@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 #coding=utf-8
-
+import operator
 #列表List
 
 
@@ -21,39 +21,39 @@ list3 = ["a", "b", "c", "d"];
 list1 = ['physics', 'chemistry', 1997, 2000];
 list2 = [1, 2, 3, 4, 5, 6, 7 ];
 
-print "list1[0]: ", list1[0]
-print "list2[1:5]: ", list2[1:5]
+print ("list1[0]: ", list1[0])
+print ("list2[1:5]: ", list2[1:5])
 
 ##更新列表
 lists = ['physics', 'chemistry', 1997, 2000];
 
-print "Value available at index 2 : "
-print lists[2];
+print ("Value available at index 2 : ")
+print (lists[2]);
 lists[2] = 2001;
-print "New value available at index 2 : "
-print lists[2];
+print ("New value available at index 2 : ")
+print (lists[2]);
 
 ##删除列表元素
 list1 = ['physics', 'chemistry', 1997, 2000];
 
-print list1;
+print (list1);
 del list1[2];
-print "After deleting value at index 2 : "
-print list1;
+print ("After deleting value at index 2 : ")
+print (list1);
 
 ##Python列表脚本操作符
 ##列表对 + 和 * 的操作符与字符串相似。+ 号用于组合列表，* 号用于重复列表。
-print len([1,2,3]) ##长度
-print [1, 2, 3] + [4, 5, 6] ##组合
-print ['Hi!'] * 4 ##重复
-print 3 in [1, 2, 3] ##元素是否存在于列表
-for x in [1, 2, 3]: print x ##迭代
+print (len([1,2,3])) ##长度
+print ([1, 2, 3] + [4, 5, 6]) ##组合
+print (['Hi!'] * 4) ##重复
+print (3 in [1, 2, 3]) ##元素是否存在于列表
+for x in [1, 2, 3]: print (x) ##迭代
 
 ##Python列表截取
 L = ['Google', 'Runoob', 'Taobao']
-print L[2]
-print L[-2] ##读取列表中倒数第二个元素
-print L[1:] ##从第二个元素开始截取列表
+print (L[2])
+print (L[-2]) ##读取列表中倒数第二个元素
+print (L[1:]) ##从第二个元素开始截取列表
 
 ##Python列表函数&方法
 
@@ -69,81 +69,85 @@ print L[1:] ##从第二个元素开始截取列表
 如果我们用尽了两个列表的元素而且所 有元素都是相等的,那么结果就是个平局,就是说返回一个 0。
 '''
 list1, list2 = [123, 'xyz'], [456, 'abc']
-
-print cmp(list1, list2);
-print cmp(list2, list1);
-list3 = list2 + [786];
-print cmp(list2, list3)
+#
+# print cmp(list1, list2);
+# print (cmp(list2, list1));
+# list3 = list2 + [786];
+# print cmp(list2, list3)
+print("greater than（大于）",operator.gt(list1,list2));
+# operator.gt(1,2)      #意思是greater than（大于）
+# operator.ge(1,2)      #意思是greater and equal（大于等于）
+# operator.eq(1,2)      #意思是equal（等于）
+# operator.le(1,2)      #意思是less and equal（小于等于）
+# operator.lt(1,2)      #意思是less than（小于）
 ###len() 方法返回列表元素个数。
 list1, list2 = [123, 'xyz', 'zara'], [456, 'abc']
-print "First list length : ", len(list1);
-print "Second list length : ", len(list2);
+print ("First list length : ", len(list1));
+print ("Second list length : ", len(list2));
 ###max() 方法返回列表元素中的最大值。
 list1, list2 = [123, 'xyz', 'zara', 'abc'], [456, 700, 200]
 
-print "Max value element : ", max(list1);
-print "Max value element : ", max(list2);
+# print ("Max value element : ", max(list1));
+# print ("Max value element : ", max(list2));
 ###min() 方法返回列表元素中的最小值。
 list1, list2 = [123, 'xyz', 'zara', 'abc'], [456, 700, 200]
 
-print "min value element : ", min(list1);
-print "min value element : ", min(list2);
+# print ("min value element : ", min(list1));
+# print ("min value element : ", min(list2));
 ###list() 方法用于将元组转换为列表。
 ###注：元组与列表是非常类似的，区别在于元组的元素值不能修改，元组是放在括号中，列表是放于方括号中。
 aTuple = (123, 'xyz', 'zara', 'abc');
 aList = list(aTuple)
 
-print "列表元素 : ", aList
+print ("列表元素 : ", aList)
 ###append() 方法用于在列表末尾添加新的对象。
 aLists = [123, 'xyz', 'zara', 'abcc'];
 aLists.append( 2009 );
-print "Updated List : ", aLists;
+print ("Updated List : ", aLists);
 ###count() 方法用于统计某个元素在列表中出现的次数。
 aList = [123, 'xyz', 'zara', 'abc', 123];
 
-print "Count for 123 : ", aList.count(123);
-print "Count for zara : ", aList.count('zara');
+print ("Count for 123 : ", aList.count(123));
+print ("Count for zara : ", aList.count('zara'));
 ###extend() 函数用于在列表末尾一次性追加另一个序列中的多个值（用新列表扩展原来的列表）。
 aList = [123, 'xyz', 'zara', 'abc', 123];
 bList = [2009, 'manni'];
 aList.extend(bList)
 
-print "Extended List : ", aList ;
+print ("Extended List : ", aList) ;
 ###index() 函数用于从列表中找出某个值第一个匹配项的索引位置。
 aList = [123, 'xyz', 'zara', 'abc'];
 
-print "Index for xyz : ", aList.index( 'xyz' ) ;
-print "Index for zara : ", aList.index( 'zara' ) ;
+print ("Index for xyz : ", aList.index( 'xyz' )) ;
+print ("Index for zara : ", aList.index( 'zara' )) ;
 ###insert() 函数用于将指定对象插入列表的指定位置。
 aList = [123, 'xyz', 'zara', 'abc']
 
 aList.insert(3, 2009)
 
-print "Final List : ", aList
+print ("Final List : ", aList)
 ###pop() 函数用于移除列表中的一个元素（默认最后一个元素），并且返回该元素的值。
 aList = [123, 'xyz', 'zara', 'abc'];
 
-print "A List : ", aList.pop();
-print "B List : ", aList.pop(2);
+print ("A List : ", aList.pop());
+print ("B List : ", aList.pop(2));
 ###remove() 函数用于移除列表中某个值的第一个匹配项。
 aList = [123, 'xyz', 'zara', 'abc', 'xyz'];
 
 aList.remove('xyz');
-print "List : ", aList;
+print ("List : ", aList);
 aList.remove('abc');
-print "List : ", aList;
+print ("List : ", aList);
 ###reverse() 函数用于反向列表中元素
 aList = [123, 'xyz', 'zara', 'abc', 'xyz'];
 
 aList.reverse();
-print "List : ", aList;
+print ("List : ", aList);
 ###sort() 函数用于对原列表进行排序，如果指定参数，则使用比较函数指定的比较函数。
 aList = [123, 'xyz', 'zara', 'abc', 'xyz'];
 
-aList.sort();
-print "List : ", aList;
-
-
+# aList.sort();
+print ("List : ", aList);
 
 
 '''
@@ -173,5 +177,5 @@ print(list1)
 
 names = [['Tom','Billy','Jefferson','Andrew','Wesley','Steven','Joe'],['Alice','Jill','Ana','Wendy','Jennifer','Sherry','Eva']]
 list1=[name.lower()  for lis in names for name in lis if name.count('e')>=2 ]
-print(list1)
+print("镶嵌列表推导式:",list1)
 

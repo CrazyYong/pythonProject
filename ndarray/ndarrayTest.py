@@ -4,7 +4,7 @@ import numpy as np
 '''
 点线
 '''
-a=np.array([1,2.,3,4])
+a=np.array([1,2.0,3,4])
 print (a.ndim)#ndim查看多少维度
 print (a.dtype)#dtype输出的是组成数组的元素的数据类型，int32
 
