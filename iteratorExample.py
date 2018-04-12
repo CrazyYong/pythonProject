@@ -25,7 +25,7 @@ next()也是python内置函数。在没有后续元素时，next()会抛出一�
 listArray = [1,2,3]
 iterName = iter(listArray)
 for i in range(0,len(listArray)):
-    print  next(iterName)
+    print  (next(iterName))
 # print (iterName)
 # print(next(iterName))
 # print(next(iterName))
@@ -58,7 +58,7 @@ def Fib(max):
         n = n + 1
 
 f=Fib(10)
-print (f.next())
+# print (f.next())
 
 '''
 生成器函数在每次暂停执行时，函数体内的所有变量都将被封存(freeze)在生成器中，
@@ -76,7 +76,7 @@ def fibonacci():
 
 for num in fibonacci():
     if num>100:break
-    print num
+    print (num)
 
 
 ##如何判断一个函数是否是一个特殊的 generator 函数？可以利用 isgeneratorfunction 判断：
@@ -118,3 +118,8 @@ print(result1)
 result2=sum([a for a in range(3)])
 print(result2)
 
+
+list=[3,2,3,4]
+it = iter(list)    # 创建迭代器对象
+for x in it:
+    print (x, end=" ")

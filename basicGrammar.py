@@ -15,7 +15,7 @@ Python 可以同一行显示多条语句，方法是用分号 ; 分开，如：
 
 '''
 
-print 'hello';print 'runoob';
+print ('hello');print ('runoob');
 
 
 
@@ -26,7 +26,7 @@ print 'hello';print 'runoob';
 
 #Python注释
 # 第一个注释
-print "Hello, Python!";  # 第二个注释
+print ("Hello, Python!");  # 第二个注释
 '''
 这是多行注释，使用单引号。
 这是多行注释，使用单引号。
@@ -41,7 +41,7 @@ print "Hello, Python!";  # 第二个注释
 
 
 #等待用户输入
-raw_input("\n\nPress the enter key to exit.")
+a=input("\n\nPress the enter key to exit.")
 
 
 #同一行显示多条语句，Python可以在同一行中使用多条语句，语句之间使用分号(;)分割，以下是一个简单的实例：
