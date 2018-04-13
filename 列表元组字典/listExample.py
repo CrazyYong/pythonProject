@@ -149,7 +149,25 @@ aList = [123, 'xyz', 'zara', 'abc', 'xyz'];
 # aList.sort();
 print ("List : ", aList);
 
+#遍历
+#在序列中遍历时，索引位置和对应值可以使用 enumerate() 函数同时得到：
+for i,v in enumerate(['tic', 'tac', 'toe']):
+    print(i,v)
 
+
+# 同时遍历两个或更多的序列，可以使用 zip() 组合：
+questions = ['name', 'quest', 'favorite color']
+answers = ['lancelot', 'the holy grail', 'blue']
+for q, a in zip(questions, answers):
+     print('What is your {0}?  It is {1}.'.format(q, a))
+
+#要反向遍历一个序列，首先指定这个序列，然后调用 reversed() 函数：
+for i in reversed(range(1, 10, 2)):
+    print(i)
+#要按顺序遍历一个序列，使用 sorted() 函数返回一个已排序的序列，并不修改原值：
+basket = ['apple', 'orange', 'apple', 'pear', 'orange', 'banana']
+for f in sorted(set(basket)):
+    print(f)
 '''
 列表推导式
 和列表一样，列表推导式也采用了方括号[]，并且用到了一个简写版的for循环，第一部分是一个

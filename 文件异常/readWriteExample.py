@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 #coding=utf-8
 
-# with open('Python.txt','r') as ff:
-#     contents=ff.read()
-#     print(contents)
+with open('Python.txt','r') as ff:
+    contents=ff.read()
+    print(contents)
 
 #用open结合for循环逐行打印
 # ff =open('Python.txt','r')

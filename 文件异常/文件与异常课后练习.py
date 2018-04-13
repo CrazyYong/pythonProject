@@ -4,21 +4,21 @@
 # 编写一个程序，它读取这个文件，并将你所写的内容打印三次：第一次打印时读取整个文件；第二次打印时遍历文件对象；
 # 第三次打印时将各行存储在一个列表中。
 #
-# for i in range(3):
-#     if i==0:
-#         with open('learning_python.txt','r',encoding='utf-8') as file:
-#            contents=file.read()
-#            print('第一遍')
-#            print(contents)
-#     elif i==1:
-#         with open('learning_python.txt', 'r', encoding='utf-8') as file:
-#             print('第二遍')
-#             for line  in file:
-#                 print(line)
-#     elif i==2:
-#         with open('learning_python.txt', 'r', encoding='utf-8') as file:
-#             contents = file.readlines()
-#             print(contents)
+for i in range(3):
+    if i==0:
+        with open('learning_python.txt','r',encoding='utf-8') as file:
+           contents=file.read()
+           print('第一遍')
+           print(contents)
+    elif i==1:
+        with open('learning_python.txt', 'r', encoding='utf-8') as file:
+            print('第二遍')
+            for line  in file:
+                print(line)
+    elif i==2:
+        with open('learning_python.txt', 'r', encoding='utf-8') as file:
+            contents = file.readlines()
+            print(contents)
 
 # 2.下面是一个简单的示例，演示了如何将句子中的'dog'替换为'cat'：
 # >>> message = "I really like dogs."
