@@ -2,11 +2,14 @@
 #类属性可以在类方法中去调用,需要类名.属性名去调用;实例属性通过构造方法__init__去初始化
 class people:
     '''
-    这个类是一个人类,实例属性包含name,age,sex
+    类属性
     '''
     eat='喜欢吃饭喜欢睡觉'
     __like='喜欢的类型'
     #self是类的实例
+    '''
+    这个类是一个人类,实例属性包含name,age,sex
+    '''
     def __init__(self,name,age,sex):
         self.name=name
         self.age=age

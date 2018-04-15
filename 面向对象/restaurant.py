@@ -51,6 +51,7 @@ if __name__ == '__main__':
     # Ice1.get_info()
     #父类重写
     Ice1.describe_restaurant()
+    Ice1.get_info();
 
 
 

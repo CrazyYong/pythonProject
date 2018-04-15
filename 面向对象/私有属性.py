@@ -21,10 +21,12 @@ class people:
     @classmethod
     def class1(cls):
         print('人们几乎都%s' % cls.eat)
+
 #person1是类的实例化对象
 if __name__=='__main__':
     person1=people('成乔恩',34,'女')
-    # person1.static1()
+    person1.static1()
+    person1.getinfo()
     person1.class1()
 
 
