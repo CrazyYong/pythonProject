@@ -28,7 +28,7 @@ def recv_data(pipe):
     print('接收的一个值是%s'%value)
 
 if __name__=='__main__':
-    pipe = multiprocessing.Pipe(duplex=False)
+    pipe = multiprocessing.Pipe()
     message = 'Python'
     p1 = multiprocessing.Process(target=send_data, args=(pipe[0], message))
     p2 = multiprocessing.Process(target=recv_data, args=(pipe[1],))

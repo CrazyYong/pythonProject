@@ -1,7 +1,7 @@
-import random
-from collections import Counter
-import random
-selfref_list = [1, 2, 3]
-selfref_list.append(selfref_list)
+import numpy as np
 
-print(selfref_list)
+
+
+arry1=[1,2,3,4]
+a=np.array(arry1)
+print(a)

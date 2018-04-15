@@ -14,27 +14,27 @@ Python 提供了一个 time 和 calendar 模块可以用于格式化日期和时
 Python 的 time 模块下有很多函数可以转换常见日期格式。如函数time.time()用于获取当前时间戳, 如下实例:
 '''
 ticks = time.time()
-print "当前时间戳为:", ticks
+print ("当前时间戳为:", ticks)
 
 ##获取当前时间
 localtime = time.localtime(time.time())
-print "本地时间为 :", localtime
+print ("本地时间为 :", localtime)
 
 
 ##获取格式化的时间
 localtime = time.asctime(time.localtime(time.time()) )
-print "本地时间为 :", localtime
+print ("本地时间为 :", localtime)
 
 ##格式化日期
 # 格式化成2016-03-20 11:45:39形式
-print time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+print (time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
 
 # 格式化成Sat Mar 28 22:24:24 2016形式
-print time.strftime("%a %b %d %H:%M:%S %Y", time.localtime())
+print (time.strftime("%a %b %d %H:%M:%S %Y", time.localtime()))
 
 # 将格式字符串转换为时间戳
 a = "Sat Mar 28 22:24:24 2016"
-print time.mktime(time.strptime(a, "%a %b %d %H:%M:%S %Y"))
+print (time.mktime(time.strptime(a, "%a %b %d %H:%M:%S %Y")))
 
 ##python中时间日期格式化符号：
 '''
@@ -64,17 +64,17 @@ print time.mktime(time.strptime(a, "%a %b %d %H:%M:%S %Y"))
 
 ##获取某月日历
 cal = calendar.month(2017, 12)
-print "以下输出2016年1月份的日历:"
-print cal;
+print ("以下输出2016年1月份的日历:")
+print (cal);
 
 ##Time 模块
-print time.timezone
-print time.tzname
+print (time.timezone)
+print (time.tzname)
 
 ##日历（Calendar）模块
-print calendar.isleap(2017)  #是闰年返回True，否则为false。
-print calendar.firstweekday() #返回当前每周起始日期的设置。默认情况下，首次载入caendar模块时返回0，即星期一。
-print calendar.leapdays(2005,2017)#返回在Y1，Y2两年之间的闰年总数。
+print (calendar.isleap(2017))  #是闰年返回True，否则为false。
+print (calendar.firstweekday()) #返回当前每周起始日期的设置。默认情况下，首次载入caendar模块时返回0，即星期一。
+print (calendar.leapdays(2005,2017))#返回在Y1，Y2两年之间的闰年总数。
 
 
 ##datetime包
