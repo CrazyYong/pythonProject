@@ -79,14 +79,18 @@ numpy的布尔索引
 '''
 
 
-# names=np.array(['A','B','C'])
-#
-# scores=np.array([[89,99,10,20], [30, 45, 55, 67], [44, 100,99,20]])
-# classs=np.array([u'语文',u'数学',u'英语',u'体育',])
-#
-#
-# names=='A'
-# print(names)
+# names=np.array(['Gerry','Tom','John'])
+# scores=np.array([[98,87,86,95],
+#                  [58,56,54,51],
+#                  [78,85,85,77]])
+# classs=np.array([u'语文',u'数学',u'英语',u'科学'])
+# print('Gerry score is:',scores[names=='Gerry'].reshape(-1))
+# print('Gerry 数学 score is:',scores[names=='Gerry'].reshape(-1)[classs==u'数学'])
+# print(u'Gerry 和 Tom的成绩-----')
+# print(scores[(names=='Gerry')|(names=='Tom')])
+# print('非Gerry和Tom学生的成绩')
+# print(scores[(names!='Gerry')&(names!='Tom')].reshape(-1))
+# print('非Gerry和Tom学生的数学成绩:',scores[(names!='Gerry')&(names!='Tom')].reshape(-1)[classs==u'数学'])
 
 
 names=np.array(["Bob","Joe","Will","Bob","Will","Joe","Joe"])
@@ -99,8 +103,28 @@ print(data[names=="Bob"])
 
 '''
 花式索引
+与切片不同，花式索引总是将数据复制到新数组中。
+'''
+arr7 = np.arange(35).reshape(5,7)#生成一个5*7的数组
+
+'''
+array([[ 0,  1,  2,  3,  4,  5,  6],
+       [ 7,  8,  9, 10, 11, 12, 13],
+       [14, 15, 16, 17, 18, 19, 20],
+       [21, 22, 23, 24, 25, 26, 27],
+       [28, 29, 30, 31, 32, 33, 34]])
+'''
+print(arr7[[1,3,2,4],[2,0,6,5]]) ##表示：获取第一轴的第二个数据 1，第三轴的第0个数据21，以此类推
+
+print(arr7[[1,3,2,4]][:,[2,0,6,5]])## [1,3,2,4]表示 第一轴，第三轴，第二轴，第四轴， :对第一轴，第三轴，第二轴，第四轴全维度保留，[2,0,6,5]对全维度保留的每一个轴获取第二2，第0个，第6个，第5个元素
+'''
+array([[ 9,  7, 13, 12],
+       [23, 21, 27, 26],
+       [16, 14, 20, 19],
+       [30, 28, 34, 33]])
 '''
 
+print(arr7[np.ix_([1,3,2,4],[2,0,6,5])])##它的作用与上面的方法类似，只不过是将两个一维的数组转换为了一个可以选择矩形区域的索引器。
 
 '''
 通过reshape形式更改数组形状之后生成的新的数组，是原来数组的一个视图
