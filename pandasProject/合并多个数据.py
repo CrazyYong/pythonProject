@@ -8,7 +8,7 @@ df3=pd.DataFrame(np.ones((3,4))*2,columns=['a','b','c','d'])
 print(df1)
 print(df2)
 print(df3)
-res=pd.concat([df1,df2,df3],axis=0)#axis=0列，
+res=pd.concat([df1,df2,df3],axis=0)#axis=0列，不指定aixs默认按列合并
 print(res)
 
 res=pd.concat([df1,df2,df3],axis=0,ignore_index=True)#忽略index进行合并,会把index重新排序
