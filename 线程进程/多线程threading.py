@@ -80,7 +80,7 @@ def movie(name,loop):
     print(ctime())
 if __name__=='__main__':
     t=[]
-    t1=threading.Thread(target=music,name='thread--线程名1',args=('香水有毒',4))
+    t1=threading.Thread(target=music,name='thread--线程名1',args=('香水有毒',4)) #被调用的函数没有括号，被调用的函数的参数放在args(…)中
     t2=threading.Thread(target=movie,name='thread--线程名2',args=('机器总动员',4))
     t.append(t1)
     t.append(t2)

@@ -1,5 +1,6 @@
 # -*- conding:UTF-8 -*-
-# 创建函数并将其作为单进程
+
+#########################创建函数并将其作为单进程
 import multiprocessing
 import time
 # def write1(filename):
@@ -9,7 +10,8 @@ import time
 # if __name__=='__main__':
 #     write1('lianxi1.txt')
 
-# 创建函数并将其作为多个进程
+
+########################创建函数并将其作为多个进程
 # import multiprocessing
 # import time
 # def write1(filename):
@@ -18,7 +20,7 @@ import time
 #         file.write('接下来我们将进入正科学习\n')
 # if __name__=='__main__':
 #     for i in range(5):
-#         p=multiprocessing.Process(target=write1,name='进程--{0}'.format(i),args=('lianxi2.txt',))
+#         p=multiprocessing.Process(target=write1,name='进程--{0}'.format(i),args=('lianxi2.txt',)) #被调用的函数没有括号，被调用的函数的参数放在args(…)中
 #         p.start()
 #         #ident和pid一样都是返回进程标识符
 #         # print(p.ident)
@@ -27,7 +29,7 @@ import time
 #         print(p.name)
 
 
-#将进程定义为类
+#########################将进程定义为类
 import multiprocessing
 import time
 class clockprocess(multiprocessing.Process):
