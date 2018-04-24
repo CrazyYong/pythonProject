@@ -23,11 +23,17 @@ plt.ylim(0,15)
 plt.xticks(np.linspace(0,6,5))
 #设置Y轴刻度
 plt.yticks(np.arange(1,15,3),['2011年','2012年','2013年','2014年','2015年'])
-#获取坐标轴信息
+#获取坐标轴信息 gca='get current axis'
 ax=plt.gca()
 #设置边框
 ax.spines['right'].set_color('none')
 ax.spines['top'].set_color('none')
 #legend 生成默认图例
-plt.legend()
+plt.legend(loc='best')
+'''
+另一种构造图例的方式
+pl1,=plt.plot(x1,y1,'ro--')#设置线条标签
+pl2,=plt.plot(x2,y2,'b-')
+plt.legend(handles=[pl1,pl2,],labels=['aaa','bbb'],loc='best')
+'''
 plt.show()
