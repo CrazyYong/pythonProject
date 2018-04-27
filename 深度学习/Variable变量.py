@@ -6,7 +6,7 @@ state = tf.Variable(0,name='counter')#定义变量，初始值为0，名字为 c
 one=tf.constant(1)#常量1
 
 new_value=tf.add(state,one)#加上一个常量 one
-update=tf.assign(state,new_value)#把new_value加载到变量state上
+update=tf.assign(state,new_value)#把new_value的值赋给state
 
 init = tf.global_variables_initializer()#初始化所有的变量，如果有定义变量，一定要用这个方式
 

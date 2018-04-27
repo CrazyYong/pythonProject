@@ -11,7 +11,10 @@ print (a.dtype)#dtype输出的是组成数组的元素的数据类型，int32
 '''
 面
 '''
-b=np.array([[1,2,3,4],[1,2,3,4]])
+b=np.array([
+    [1,2,3,4],
+    [1,2,3,4]
+])
 print (b.ndim)
 
 

@@ -6,7 +6,10 @@ x_data = np.random.rand(100).astype(np.float32)
 y_data = x_data*0.1 + 0.3
 
 ###      create tensorflow structure start     创建结构开始###
-Weights = tf.Variable(tf.random_uniform([1], -1.0, 1.0))#参数变量，可能是一个矩阵，初始范围-1.0 - 1.0
+'''
+tf.random_uniform((4, 4), minval=low,maxval=high,dtype=tf.float32)))返回4*4的矩阵，产生于low和high之间，产生的值是均匀分布的
+'''
+Weights = tf.Variable(tf.random_uniform([1], -1.0, 1.0,dtype=tf.float32))#参数变量，可能是一个矩阵，初始范围-1.0 - 1.0
 biases = tf.Variable(tf.zeros([1]))#初始值为0
 
 y = Weights*x_data + biases#预测的y
