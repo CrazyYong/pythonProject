@@ -11,8 +11,8 @@ mgrid[[1:3:3j, 4:5:2j]]
 3j：表示三个点
 '''
 X1,Y1=np.mgrid[1:3:3j,4:5:2j]
-# print(X1)
-# print(Y1)
+print(X1)
+print(Y1)
 
 '''
 np.orgid[起:止:步长,起:止:步长]

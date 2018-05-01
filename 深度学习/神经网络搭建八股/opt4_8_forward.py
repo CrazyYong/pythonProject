@@ -5,7 +5,7 @@ import tensorflow as tf
 #定义神经网络的输入、参数和输出，定义前向传播过程 
 def get_weight(shape, regularizer):
 	w = tf.Variable(tf.random_normal(shape), dtype=tf.float32)
-	tf.add_to_collection('losses', tf.contrib.layers.l2_regularizer(regularizer)(w))
+	tf.add_to_collection('losses', tf.contrib.layers.l2_regularizer(regularizer)(w))#正则化参数
 	return w
 
 def get_bias(shape):  
