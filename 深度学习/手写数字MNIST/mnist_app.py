@@ -6,8 +6,9 @@ from PIL import Image
 
 from 深度学习.手写数字MNIST import mnist_backward, mnist_forward
 
-
+#将符合神经网络输入要求的图片喂给复现的神经网络模型，输出预测值
 def restore_model(testPicArr):
+	#创建一个默认图，在该图中执行以下操作（多数操作和train中一样）
 	with tf.Graph().as_default() as tg:
 		x = tf.placeholder(tf.float32, [None, mnist_forward.INPUT_NODE])
 		y = mnist_forward.forward(x, None)
@@ -28,12 +29,12 @@ def restore_model(testPicArr):
 				print("No checkpoint file found")
 				return -1
 
-
+#对手写图片做预处理,包括resize,转变灰度图、二值化操作
 def pre_pic(picName):
 	img = Image.open(picName)
 	reIm = img.resize((28, 28), Image.ANTIALIAS)
 	im_arr = np.array(reIm.convert('L'))
-	threshold = 50
+	threshold = 50#设定合理的阈值
 	for i in range(28):
 		for j in range(28):
 			im_arr[i][j] = 255 - im_arr[i][j]
@@ -44,7 +45,7 @@ def pre_pic(picName):
 
 	nm_arr = im_arr.reshape([1, 784])
 	nm_arr = nm_arr.astype(np.float32)
-	img_ready = np.multiply(nm_arr, 1.0 / 255.0)
+	img_ready = np.multiply(nm_arr, 1.0 / 255.0)#让现有的RGB图从0-255之间的数变成0-1之间的浮点数
 
 	return img_ready
 
